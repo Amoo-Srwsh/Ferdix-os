@@ -14,10 +14,10 @@ void srand(unsigned int seed){
 }
 
 size_t strlen(const char* str){
-    char *len = str;
+    const char *len = str;
     while ((*str++));
     
-    return str - len;
+    return (str - len) - 1;
 }
 
 void delay(float t){   
@@ -26,4 +26,3 @@ void delay(float t){
         for(j=0;j<250000;j++)
             __asm__("NOP");
 }
- 
