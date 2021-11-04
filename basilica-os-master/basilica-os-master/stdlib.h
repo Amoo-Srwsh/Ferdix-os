@@ -14,10 +14,10 @@ void srand(unsigned int seed){
 }
 
 size_t strlen(const char* str){
-    size_t len = 0;
-    while (str[len])
-        len++;
-    return len;
+    char *len = str;
+    while ((*str++));
+    
+    return str - len;
 }
 
 void delay(float t){   
